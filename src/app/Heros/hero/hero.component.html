@@ -1,0 +1,21 @@
+<h1>{{nombre}}</h1>
+<dl>
+  <dt>Nombre:</dt>
+  <dd>{{nombre}}</dd>
+  <dt>Edad:</dt>
+  <dd>{{edad}}</dd>
+  <dt>Metodo:</dt>
+  <dd>{{getdescripcionHeroe()}}</dd>
+  <dt>Capitalizado:</dt>
+  <dd>{{nombreCapitalizado}}</dd>
+</dl>
+<!--Comprobar si el valor de nombre ha cambiado con ngIf-->
+<button *ngIf="nombre ==='Ironman'" (click)="cambiarNombre()" class="btn btn-primary me-2">
+  Cambiar nombre
+</button>
+<button *ngIf="edad === 45" (click)="cambiarEdad()" class="btn btn-primary me-2">
+  Cambiar Edad
+</button>
+<button (click)="resetForm()" class="btn btn-primary">
+  Resetear
+</button>

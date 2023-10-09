@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {
+  Component
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = "Mi primera app de Angular";
+  public contador: number = 10;
+  Aumentar(value:number): void {
+    this.contador+=value;
+  }
+  Resetear(): void {
+    this.contador=10;
+  }
 }
